@@ -1,0 +1,33 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.loader {
+    position: relative;
+    width: 120px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: rgb(217, 217, 217);
+    overflow: hidden;
+}
+
+.loader::after {
+    position: absolute;
+    content: '';
+    width: 60%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgb(65, 99, 251);
+    animation: left-to-right 1s ease-in-out infinite;
+}
+
+@keyframes left-to-right {
+    0% {
+        left: -60%;
+    }
+    100% {
+        left: 100%;
+    }
+}
